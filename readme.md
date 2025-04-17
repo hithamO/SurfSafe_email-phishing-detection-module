@@ -1,7 +1,9 @@
-# Advanced Email Phishing Detector V3 
+# SurfSafe | Advanced Email Phishing Detector 
 
-This tool analyzes email files (.eml, .msg) to detect potential phishing attempts using a multi-faceted approach including header analysis, content inspection, external threat intelligence (VirusTotal), Optical Character Recognition (OCR) for images, and optional AI-powered assessment.
-v2 link: https://github.com/hithamO/email-phishing-detector-test
+This tool analyses email files (.eml, .msg) to detect potential phishing attempts using a multi-faceted approach including header analysis, content inspection, external threat intelligence (VirusTotal), Optical Character Recognition (OCR) for images, and optional AI-powered assessment.
+
+v2 link: https://github.com/hithamO/email-phishing-detector-test 
+V3 link: https://github.com/hithamO/email-phishing-detection_V3
 
 ## Features
 
@@ -32,7 +34,7 @@ v2 link: https://github.com/hithamO/email-phishing-detector-test
 - Uses asynchronous requests (`aiohttp`) for efficiency.
 - Caches VT results in a local SQLite database (`aiosqlite`) to reduce API calls and speed up re-analysis.
 
-### AI-Powered Assessment (Optional)
+### AI-Powered Assessment
 - Sends a detailed report of all findings to a configured AI model (e.g., via OpenRouter).
 - Prompts the AI to provide a structured JSON response including:
   - Phishing Score (0-10)
