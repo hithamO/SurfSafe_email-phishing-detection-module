@@ -61,6 +61,8 @@ def build_ai_prompt(analysis_data: Dict[str, Any]) -> Optional[Dict[str, str]]:
 3.  Provide your analysis ONLY in the specified JSON format below. Do not include any introductory text, explanations outside the JSON structure, or markdown formatting like ```json. Just the raw JSON.
 4.  Always keep in your mind that there are a lot of false-positives in the result of VT.
 5.  In your analysis consider that even if a specific elements identified as suspicious the email could be clean.
+6. Ensure the confidence score reflects realistic uncertainty. Avoid extremes unless strongly justified.
+7. When signals are mixed (e.g., clean headers but suspicious image text), weigh the most impactful signals and flag the verdict accordingly.
 
 **Required JSON Output Format:**
 ```json
