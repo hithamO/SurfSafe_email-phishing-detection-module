@@ -39,7 +39,7 @@ class Config:
         # OCR (Optical Character Recognition) for Images in Attachments
         "OCR_ENABLED": True, 
         "OCR_LANGUAGES": ['eng'], 
-        "TESSERACT_CMD": None, 
+        "TESSERACT_CMD": r"path_of_the_ocr",#should be changed
 
         # File Handling
         "SUPPORTED_FILES": [".eml", ".msg"], 

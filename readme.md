@@ -1,6 +1,6 @@
 # SurfSafe | Advanced Email Phishing Detector 
 
-This tool analyses email files (.eml, .msg) to detect potential phishing attempts using a multi-faceted approach including header analysis, content inspection, external threat intelligence (VirusTotal), Optical Character Recognition (OCR) for images, and optional AI-powered assessment.
+This tool analyses email files (.eml) to detect potential phishing attempts using a multi-faceted approach including header analysis, content inspection, external threat intelligence (VirusTotal), Optical Character Recognition (OCR) for images, and optional AI-powered assessment.
 
 v2 link: https://github.com/hithamO/email-phishing-detector-test 
 V3 link: https://github.com/hithamO/email-phishing-detection_V3
@@ -8,7 +8,7 @@ V3 link: https://github.com/hithamO/email-phishing-detection_V3
 ## Features
 
 ### Comprehensive Parsing
-- Extracts headers, body (text/html), attachments, and structure from `.eml` and `.msg` files.
+- Extracts headers, body (text/html), attachments, and structure from `.eml` files.
 
 ### Header Analysis
 - Decodes standard headers (Subject, From, To, Reply-To).
@@ -111,7 +111,7 @@ python main.py -f <path_to_email_file.eml> [options]
 ```
 
 ### Arguments
-- `-f, --file`: (Required) Path to the email file (.eml or .msg) to analyze.
+- `-f, --file`: (Required) Path to the email file (.eml) to analyze.
 - `--ai`: (Optional) Enable AI-based analysis.
 - `-o, --output`: (Optional) Save analysis results as a JSON file.
 - `-v, --verbose`: (Optional) Enable verbose console output.
@@ -124,7 +124,7 @@ python main.py -f suspicious_email.eml
 
 Analysis with AI enabled and save results to JSON:
 ```bash
-python main.py -f urgent_invoice.msg --ai -o report.json
+python main.py -f urgent_invoice.eml --ai -o report.json
 ```
 
 Verbose console report:
@@ -197,7 +197,7 @@ python main.py -f newsletter.eml -v
 
 - **`main.py`**: Orchestrates the analysis workflow.
 - **`config/config.py`**: Manages API keys and settings.
-- **`src/email_parser.py`**: Parses `.eml` and `.msg` files.
+- **`src/email_parser.py`**: Parses `.eml` files.
 - **`src/database_manager.py`**: Manages VirusTotal cache in SQLite.
 - **`src/security_analyzer.py`**: Performs header, body, and attachment analysis.
 - **`src/ai_integration.py`**: Handles AI-based assessment.
